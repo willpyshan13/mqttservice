@@ -3,11 +3,16 @@
 buildscript {
     repositories {
         google()
-        jcenter()
         maven {
             url "https://repo.eclipse.org/content/repositories/paho-releases/"
         }
-        
+        maven {
+            url "http://maven.aliyun.com/nexus/content/repositories/central/"
+        }
+
+        maven{ url'http://maven.aliyun.com/nexus/content/groups/public/' }
+
+
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.3.2'
@@ -20,11 +25,16 @@ buildscript {
 allprojects {
     repositories {
         google()
-        jcenter()
         maven {
             url "https://repo.eclipse.org/content/repositories/paho-releases/"
         }
-        
+        maven {
+            url "http://maven.aliyun.com/nexus/content/repositories/central/"
+        }
+
+        maven{ url'http://maven.aliyun.com/nexus/content/groups/public/' }
+
+
     }
 }
 

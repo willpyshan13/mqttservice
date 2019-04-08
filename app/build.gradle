@@ -1,6 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        config {
+            keyAlias 'will'
+            keyPassword 'will2019'
+            storeFile file('../will')
+            storePassword 'will2019'
+        }
+    }
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.wil.mqttservice"
@@ -14,6 +22,10 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+        debug {
+            signingConfig signingConfigs.config
         }
     }
 }
